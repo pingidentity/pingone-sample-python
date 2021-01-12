@@ -33,7 +33,7 @@ Also make sure that it is enabled and access grants(`phone profile address email
 
 
 # Setup & Running
-1. Copy this source code: `git clone https://github.com/pingidentity/pingone-customers-sample-oidc.git`, then enter the python directory with `cd python`
+1. Copy this source code: `git clone git@github.com:pingidentity/pingone-sample-python.git`
 
 2. If you have already different python projects, try to keep their dependencies separate by creating isolated python virtual environments for them.
 Otherwise, you can skip this step.
@@ -41,7 +41,7 @@ Otherwise, you can skip this step.
     where `_venv` is a path to a new virtual environment
     Once a virtual environment has been created, it then should be “activated” via: `source _venv/bin/activate`
 
-3. Install all requirements by: `pip3 install -r requirements.txt`
+3. Install all requirements by: `pip3 install -r requirements.txt --use-feature=2020-resolver`
 
 4. Grab the following application configuration information from the admin console to replace placeholders in [config.cfg](config.cfg) with it: **ENVIRONMENT_ID**, **CLIENT_ID**, **CLIENT_SECRET** (if necessary), **OAUTH_REDIRECT_PATH**
 5. Start an application by: `python3 app.py`
